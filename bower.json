@@ -1,0 +1,14 @@
+{
+  "name": "github-api-app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/andela-aabdullahi/github-api-app",
+  "description": "\"Get, add, delete and also post data to gitHub\"",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
