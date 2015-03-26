@@ -10,24 +10,36 @@
 <body>
   <!-- SEARCH FILTER BY USER-NAME -->
   <md-toolbar>
-    <h2 class="md-toolbar-tools">
-        <span style="color:white">GitHup Search Engine</span>
-      </h2>
-    </md-toolbar>
+    <div layout="row" layout-align="space-between center">
+      <h2 class="md-toolbar-tools">
+       <div layout="row" layout-align="space-between center">
+   <!--  <md-icon md-svg-src="assets/images/android3.svg" class="people2" style="margin-right: 20px">
+    --> <md-icon md-svg-src="assets/images/google23.svg" class="people2" style="margin-right: 20px">
+    <!-- <md-icon md-svg-src="assets/images/linked2.svg" class="people2" style="margin-right: 20px">
+     --><md-icon md-svg-src="assets/images/youtube33.svg" class="people2" style="margin-right: 20px">
+  </div>
+       <span style="color:white">GitHup Search Engine</span></h2>
+      <a href="https://play.google.com/store/search?q=aliyu%20olalekan&amp;c=apps&amp;hl=en">
+        <md-icon md-svg-src="assets/images/grid2.svg" class="people2" style="margin-right: 20px">
+      </a>
+      </md-icon>
+      </a>
+    </div>
+  </md-toolbar>
       <div data-ng-view=""></div>
-
-  <!-- APPEND USER IMAGE -->
-  <!-- EDIT USER REPO-->
-  <!-- DELETE USER REPO-->
-  <script src = "vendor/angular/angular.js"></script>
-  <script src = "vendor/angular-material/angular-material.js"></script>
-  <script src = "vendor/angular-animate/angular-animate.js"></script>
-  <script src = "vendor/angular-aria/angular-aria.js"></script>
-  <script src = "vendor/angular-mocks/angular-mocks.js"></script>
-  <script src = "vendor/angular-route/angular-route.js"></script>
-  <script src = "app/app.js"></script>
-  <script src = "app/controller.js"></script>
-  <script src = "app/service.js"></script>
+      <!-- APPEND USER IMAGE -->
+      <!-- EDIT USER REPO-->
+      <!-- DELETE USER REPO-->
+      <script src="vendor/angular/angular.js"></script>
+      <script src="vendor/angular-material/angular-material.js"></script>
+      <script src="vendor/angular-animate/angular-animate.js"></script>
+      <script src="vendor/angular-aria/angular-aria.js"></script>
+      <script src="vendor/angular-mocks/angular-mocks.js"></script>
+      <script src="vendor/angular-route/angular-route.js"></script>
+      <script src="app/app.js"></script>
+      <script src="app/controller.js"></script>
+      <script src="app/service.js"></script>
+      <script src="app/authservice.js"></script>
 </body>
 
 </html>

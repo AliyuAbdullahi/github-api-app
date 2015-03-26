@@ -1,10 +1,43 @@
-
-  <md-content style="margin-top:20% ">
-    <div layout="row" layout-align="center center" style="margin-top='50px">
-      <input type="text" class="input" placeholder="Enter user name" ng-model="person.username" required></input>
-      <span><md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click ="getUserName();"ng-value="search" style="background-color:#C7C7C7">
+<md-content style="margin-top:20%; " ng-show="defaultpage">
+  <div layout="row" layout-align="center center" style="margin-top='50px">
+    <input type="text" class="input" placeholder="Enter github user name..." ng-model="username" required></input>
+      <span><md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click ="getUser();"ng-value="search" style="background-color:#C7C7C7">
             <md-icon md-svg-src="assets/images/user58.svg" class = "people"></md-icon>
             <md-tooltip md-direction="right">Search</md-tooltip>
-          </md-button><span>
-        </div>
-    </md-content>
+          </md-button>
+        </span>
+    </div>
+  </md-content>
+
+  
+ <md-card ng-show="showDetails"style="width:300px; height:300px; padding:10px; marging: 20px; float:left">
+  <img src="{{auth.avatar_url}}">
+</md-card>
+
+<div class="details" layout="column" ng-show="showDetails">
+  <span class="bluebackground"><img src="assets/images/user168.png" class="imagestyle"><span>{{auth.name}}</span></span>
+  <span class="redbackground"><img src="assets/images/home63.png" class="imagestyle">{{auth.company}}</span>
+  <span class = "bluebackground"><img src="assets/images/group2.png" class="imagestyle">Followers: {{auth.followers}}</span>
+  <span class = "redbackground"><img src="assets/images/users6.png" class="imagestyle">Following: {{auth.following}}</span>
+  <span class = "bluebackground"><img src="assets/images/opened4.png" class="imagestyle"><a href=""{{auth.email}}"">{{auth.email}}</a></span>
+  <span ng-click="getRepo();" class = "redbackground1">Public Repos:{{auth.public_repos}}</span>
+  <div style="float:left">
+    <ul ng-repeat="repo in store">
+      <li><a href="{{repo.html_url}}"> {{repo.name}} </a></li>
+      <div></div>
+
+    </ul>
+    <button ng-show="hiderepobutton">hide repos</button>
+  </div>
+
+
+      <!-- <md-grid-tile-footer>
+        <h2>{{auth.name}}</h2>
+      </md-grid-tile-footer> -->
+    </md-grid-tile>
+    </md-grid-list>
+</div>
+   
+
+
+ <md-content>

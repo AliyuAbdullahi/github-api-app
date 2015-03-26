@@ -1,0 +1,7 @@
+ <p>{{auth.name}} </p>
+     <img src="{{auth.avatar_url}}">
+     <button ng-click="getRepo();"></button>
+     <ul ng-repeat="repo in store">
+            <li><a href="{{repo.html_url}}"> {{repo.name}} </a></li>
+          
+        </ul>
